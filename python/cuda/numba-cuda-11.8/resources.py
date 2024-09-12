@@ -62,7 +62,7 @@ def get_image_ygrad(
 
 
 def sobel_filter_cpu(
-    img: np.ndarray, kernel: Optional[List[int]] = [16, 16]
+    img: np.ndarray, kernel: Optional[List[int]] = [3, 3]
 ) -> np.ndarray:
     outputH = np.zeros(img.shape)
     outputV = np.zeros(
@@ -72,7 +72,7 @@ def sobel_filter_cpu(
 
     ###Smooth images###
     img = cv.GaussianBlur(
-        img, (16, 16), np.std(img) / 4
+        img, (3, 3), np.std(img) / 4
     )  # The amount of gaussian blur can directly determine the sharpness of the sobel filter edge
 
     ###Unsure of if this is useful for edge detection but since we apply the same convolution algorithm:###
