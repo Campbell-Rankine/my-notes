@@ -1,0 +1,9 @@
+fastapi
+fastapi[all]
+requests
+pydantic
+uvicorn-worker
+pydantic
+uvicorn
+gunicorn
+python-dotenv
